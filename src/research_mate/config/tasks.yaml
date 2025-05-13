@@ -1,0 +1,18 @@
+collect_articles:
+  description: "Collect academic papers, articles, and reports about the topic: {topic}. Extract only highly relevant academic research content."
+  expected_output: "A list of academic papers, articles, and reports on {topic}, containing only the most relevant research content."
+  agent: research_agent
+  tools:
+    - pubmed
+    - arxiv
+    - document_search
+
+summarization:
+  description: "Summarize research articles on {topic} into a structured academic report."
+  expected_output: "A markdown-formatted academic report on {topic} with required sections and references."
+  agent: summariser_agent
+
+edit_report:
+  description: "Polish the research report on {topic} for clarity and academic tone."
+  expected_output: "A polished, publication-ready report on {topic} with preserved structure."
+  agent: editor_agent

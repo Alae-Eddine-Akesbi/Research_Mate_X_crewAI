@@ -1,0 +1,41 @@
+<ns0:entry xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns1="http://arxiv.org/schemas/atom">
+    <ns0:id>http://arxiv.org/abs/2409.07415v2</ns0:id>
+    <ns0:updated>2025-04-30T22:27:30Z</ns0:updated>
+    <ns0:published>2024-09-11T16:59:58Z</ns0:published>
+    <ns0:title>SoK: Security and Privacy Risks of Healthcare AI</ns0:title>
+    <ns0:summary>  The integration of artificial intelligence (AI) and machine learning (ML)
+into healthcare systems holds great promise for enhancing patient care and care
+delivery efficiency; however, it also exposes sensitive data and system
+integrity to potential cyberattacks. Current security and privacy (S&amp;P)
+research on healthcare AI is highly unbalanced in terms of healthcare
+deployment scenarios and threat models, and has a disconnected focus with the
+biomedical research community. This hinders a comprehensive understanding of
+the risks that healthcare AI entails. To address this gap, this paper takes a
+thorough examination of existing healthcare AI S&amp;P research, providing a
+unified framework that allows the identification of under-explored areas. Our
+survey presents a systematic overview of healthcare AI attacks and defenses,
+and points out challenges and research opportunities for each AI-driven
+healthcare application domain. Through our experimental analysis of different
+threat models and feasibility studies on under-explored adversarial attacks, we
+provide compelling insights into the pressing need for cybersecurity research
+in the rapidly evolving field of healthcare AI.
+</ns0:summary>
+    <ns0:author>
+      <ns0:name>Yuanhaur Chang</ns0:name>
+    </ns0:author>
+    <ns0:author>
+      <ns0:name>Han Liu</ns0:name>
+    </ns0:author>
+    <ns0:author>
+      <ns0:name>Chenyang Lu</ns0:name>
+    </ns0:author>
+    <ns0:author>
+      <ns0:name>Ning Zhang</ns0:name>
+    </ns0:author>
+    <ns0:link href="http://arxiv.org/abs/2409.07415v2" rel="alternate" type="text/html" />
+    <ns0:link title="pdf" href="http://arxiv.org/pdf/2409.07415v2" rel="related" type="application/pdf" />
+    <ns1:primary_category term="cs.CR" scheme="http://arxiv.org/schemas/atom" />
+    <ns0:category term="cs.CR" scheme="http://arxiv.org/schemas/atom" />
+    <ns0:category term="cs.AI" scheme="http://arxiv.org/schemas/atom" />
+    <ns0:category term="cs.LG" scheme="http://arxiv.org/schemas/atom" />
+  </ns0:entry>

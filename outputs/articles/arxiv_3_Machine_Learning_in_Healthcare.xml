@@ -1,0 +1,48 @@
+<ns0:entry xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns1="http://arxiv.org/schemas/atom">
+    <ns0:id>http://arxiv.org/abs/2209.05457v1</ns0:id>
+    <ns0:updated>2022-08-29T23:14:02Z</ns0:updated>
+    <ns0:published>2022-08-29T23:14:02Z</ns0:published>
+    <ns0:title>Reliable and Resilient AI and IoT-based Personalised Healthcare
+  Services: A Survey</ns0:title>
+    <ns0:summary>  Recent technological and economic developments have transformed the
+healthcare sector towards more personalized and IoT-based healthcare services.
+These services are realized through control and monitoring applications that
+are typically developed using artificial intelligence/machine learning-based
+algorithms, which play a significant role in highlighting the efficiency of
+traditional healthcare systems. Current personalized healthcare services are
+dedicated to a specific environment to support technological personalization.
+However, they are unable to consider different interrelated health conditions,
+leading to inappropriate diagnoses and affecting sustainability and the
+long-term health of patients. To this end, current Healthcare 5.0 technology
+has evolved that supersede previous healthcare technologies. The goal of
+healthcare 5.0 is to achieve an autonomous healthcare service, that takes into
+account the interdependent effect of different health conditions of a patient.
+This paper conducts a comprehensive survey on personalized healthcare services.
+In particular, we first present an overview of key requirements of
+comprehensive personalized healthcare services in modern healthcare Internet of
+Things (HIoT), including the definition of personalization and an example use
+case scenario as a representative for modern HIoT. Second, we explored a
+fundamental three-layer architecture for IoT-based healthcare systems using AI
+and non-AI-based approaches, considering key requirements for CPHS followed by
+their strengths and weaknesses in the frame of personalized healthcare
+services. Third, we highlighted different security threats against each layer
+of IoT architecture along with the possible AI and non-AI-based solutions.
+Finally, we propose a methodology to develop reliable, resilient, and
+personalized healthcare services that address the identified weaknesses of
+existing approaches.
+</ns0:summary>
+    <ns0:author>
+      <ns0:name>Najma Taimoor</ns0:name>
+    </ns0:author>
+    <ns0:author>
+      <ns0:name>Semeen Rehman</ns0:name>
+    </ns0:author>
+    <ns1:doi>10.1109/ACCESS.2021.3137364</ns1:doi>
+    <ns0:link title="doi" href="http://dx.doi.org/10.1109/ACCESS.2021.3137364" rel="related" />
+    <ns1:journal_ref>in IEEE Access, vol. 10, pp. 535-563, 2022</ns1:journal_ref>
+    <ns0:link href="http://arxiv.org/abs/2209.05457v1" rel="alternate" type="text/html" />
+    <ns0:link title="pdf" href="http://arxiv.org/pdf/2209.05457v1" rel="related" type="application/pdf" />
+    <ns1:primary_category term="cs.CY" scheme="http://arxiv.org/schemas/atom" />
+    <ns0:category term="cs.CY" scheme="http://arxiv.org/schemas/atom" />
+  </ns0:entry>
+  
