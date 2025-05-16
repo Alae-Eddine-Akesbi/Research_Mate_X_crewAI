@@ -1,54 +1,102 @@
-# ResearchMate Crew
+# Research Mate: Assistant de Recherche Académique
 
-Welcome to the ResearchMate Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+## Description
+
+Research Mate est une application Python qui automatise la collecte, le résumé et la génération de rapports de recherche académique à partir de sources en ligne (PubMed, ArXiv, documents locaux). Elle orchestre plusieurs agents (collecte d’articles, synthèse, édition) via la librairie **crewai**, et génère des rapports au format Markdown et PDF.
+
+## Fonctionnalités
+
+* **Recherche d’articles** sur PubMed et ArXiv (5 résultats maximum chacun)
+* **Synthèse et résumé** des contenus collectés
+* **Génération de rapports** en Markdown (`report.md`) et en PDF via Streamlit (`main_streamlit.py`)
+* **Interface Web** Streamlit pour lancer facilement la génération et télécharger les rapports
+* **Organisation modulaire** : configuration des agents (`agents.yaml`) et des tâches (`tasks.yaml`)
+
+## Structure du dépôt
+
+```
+├── research_mate/
+│   ├── crew.py                    # Orchestrateur principal (agents, tâches)
+│   ├── tools/
+│   │   ├── pubmed_tool.py         # Recherche PubMed
+│   │   ├── arxiv_tool.py          # Recherche ArXiv
+│   │   ├── document_search_tool.py# Recherche dans documents locaux
+│   └── utils.py                   # Fonctions utilitaires (sanitisation, dossiers)
+├── config/
+│   ├── agents.yaml                # Configuration des agents
+│   └── tasks.yaml                 # Configuration des tâches
+├── main.py                        # Point d’entrée CLI (`run(topic) → report.md`)
+├── main_streamlit.py              # Application Streamlit pour générer et visualiser les rapports
+├── requirements.txt               # Dépendances du projet
+└── outputs/
+    ├── articles/                  # Articles bruts téléchargés
+    └── report_<topic>.pdf         # Rapport PDF généré
+```
+
+## Prérequis
+
+* Python >= 3.8
+* Clé API Google pour Gemini 1.5 Flash (définir `GOOGLE_API_KEY` dans `.env`)
+* Accès internet pour interroger PubMed et ArXiv
 
 ## Installation
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+1. Clonez le dépôt :
 
-First, if you haven't already, install uv:
+   ```bash
+   git clone https://github.com/votre-utilisateur/research-mate.git
+   cd research-mate
+   ```
+2. Créez un environnement virtuel et installez les dépendances :
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+3. Créez un fichier `.env` à la racine :
+
+   ```
+   GOOGLE_API_KEY=Votre_Cle_API_Google
+   ```
+
+## Configuration
+
+* **Agents et tâches** : éditez `config/agents.yaml` et `config/tasks.yaml` pour ajuster les rôles, objectifs, backstories et séquences de tâches.
+* **Nombre de résultats** : par défaut, chaque outil récupère jusqu’à 5 articles. Modifiez `retmax` (PubMed) ou `max_results` (ArXiv) dans les outils si nécessaire.
+
+## Utilisation
+
+### Ligne de commande
+
+Génère un rapport Markdown sur un sujet donné et le sauvegarde dans `report.md` :
 
 ```bash
-pip install uv
+python main.py "Machine Learning in Healthcare"
 ```
 
-Next, navigate to your project directory and install the dependencies:
+### Interface Web Streamlit
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+1. Lancez l’application :
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+   ```bash
+   streamlit run main_streamlit.py
+   ```
+2. Saisissez votre **topic** et cliquez sur **Generate Research Report**.
+3. Téléchargez les articles collectés et le PDF depuis la barre latérale.
 
-- Modify `src/research_mate/config/agents.yaml` to define your agents
-- Modify `src/research_mate/config/tasks.yaml` to define your tasks
-- Modify `src/research_mate/crew.py` to add your own logic, tools and specific args
-- Modify `src/research_mate/main.py` to add custom inputs for your agents and tasks
+## Exemple de rapport
 
-## Running the Project
+* **report.md** : résumé complet produit par l’agent `edit_report`.
+* **PDF** : formaté avec ReportLab, intègre titre, date, sections, listes et références.
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+## Contribuer
 
-```bash
-$ crewai run
-```
+1. Forkez ce dépôt.
+2. Créez une branche feature : `git checkout -b feature/ma-fonctionnalité`.
+3. Commitez vos changements : `git commit -m "Ajout de ..."`
+4. Poussez et ouvrez une Pull Request.
 
-This command initializes the research_mate Crew, assembling the agents and assigning them tasks as defined in your configuration.
+## Licence
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
-## Understanding Your Crew
-
-The research_mate Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the ResearchMate Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
