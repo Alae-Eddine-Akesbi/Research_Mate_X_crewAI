@@ -34,7 +34,8 @@ def write_pdf_using_platypus(text, topic, article_sources, output_path):
         rightMargin=50,
         leftMargin=50,
         topMargin=50,
-        bottomMargin=50
+        bottomMargin=50,
+        title=f"ResearchMate Final Report - {topic}"
     )
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name='TitleCenter', parent=styles['Heading1'], alignment=1, spaceAfter=20))

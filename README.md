@@ -146,4 +146,4 @@ streamlit run main_streamlit.py
 Ce projet est sous licence **MIT**. Voir [LICENSE](LICENSE) pour plus de détails.
 
 
-![alt text](image.png)
+![alt text](image-1.png)
