@@ -125,17 +125,6 @@ streamlit run main_streamlit.py
 
 ---
 
-## 🧱 Packaging & Scripts
-
-* **pyproject.toml** définit le package `research_mate` (version 0.1.0).
-* Entrypoints CLI disponibles :
-
-  * `research_mate` -> `research_mate.main:run`
-  * `run_crew`      -> `research_mate.main:run`
-
----
-
-
 ## 📄 Licence
 
 Ce projet est sous licence **MIT**. Voir [LICENSE](LICENSE) pour plus de détails.
