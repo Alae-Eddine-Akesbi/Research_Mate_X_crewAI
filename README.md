@@ -36,25 +36,28 @@ L’architecture repose sur **crewai**, orchestration d’agents intelligents po
 ## 📂 Structure du projet
 
 ```plaintext
-├── research_mate/
-│   ├── crew.py                   # Orchestrateur principal
-│   ├── tools/                    # Implémentation des outils de collecte
-│   │   ├── pubmed_tool.py
-│   │   ├── arxiv_tool.py
-│   │   └── document_search_tool.py
-│   └── utils.py                  # Helpers (sanitisation, création de dossiers)
-├── config/
-│   ├── agents.yaml               # Définition des agents (roles, objectifs)
-│   └── tasks.yaml                # Workflow (séquence et config des tâches)
-├── main.py                       # CLI : génère `report.md`
-├── main_streamlit.py             # Interface Web + génération PDF
-├── pyproject.toml                # Configuration du package
-├── requirements.txt              # Dépendances Python
+├── src/
+│   └── research_mate/            # Code source du package
+│       ├── __init__.py
+│       ├── crew.py               # Orchestrateur principal
+│       ├── main.py               # CLI : génère `report.md`
+│       ├── main_streamlit.py     # Interface Web + génération PDF
+│       ├── utils.py              # Helpers (sanitisation, création de dossiers)
+│       ├── config/               # Définition des agents & tâches
+│       │   ├── agents.yaml
+│       │   └── tasks.yaml
+│       ├── outputs/              # Fichiers temporaires & rapports
+│       └── tools/                # Implémentation des outils de collecte
+│           ├── pubmed_tool.py
+│           ├── arxiv_tool.py
+│           └── document_search_tool.py
+├── tests/                        # Tests unitaires
 ├── .env                          # Variables d’environnement (non versionné)
-└── outputs/                      # Dossiers et rapports générés
-    ├── articles/                 # Articles bruts (.txt)
-    ├── report_<topic>.md         # Rapport Markdown
-    └── report_<topic>.pdf        # Rapport PDF
+├── .gitignore
+├── pyproject.toml                # Configuration du package
+├── README.md                     # Documentation du projet
+├── report.md                     # Exemple de rapport généré
+└── requirements.txt              # Dépendances Python
 ```
 
 ---
