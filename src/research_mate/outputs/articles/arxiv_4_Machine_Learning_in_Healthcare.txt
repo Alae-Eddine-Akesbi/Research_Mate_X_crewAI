@@ -1,0 +1,14 @@
+Title: Assessing Fairness in Classification Parity of Machine Learning Models
+  in Healthcare
+
+Summary:   Fairness in AI and machine learning systems has become a fundamental problem
+in the accountability of AI systems. While the need for accountability of AI
+models is near ubiquitous, healthcare in particular is a challenging field
+where accountability of such systems takes upon additional importance, as
+decisions in healthcare can have life altering consequences. In this paper we
+present preliminary results on fairness in the context of classification parity
+in healthcare. We also present some exploratory methods to improve fairness and
+choosing appropriate classification algorithms in the context of healthcare.
+
+
+PDF: http://arxiv.org/pdf/2102.03717v1

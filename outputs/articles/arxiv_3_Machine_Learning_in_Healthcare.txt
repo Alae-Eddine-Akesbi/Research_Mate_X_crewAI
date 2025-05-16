@@ -1,10 +1,7 @@
-<ns0:entry xmlns:ns0="http://www.w3.org/2005/Atom" xmlns:ns1="http://arxiv.org/schemas/atom">
-    <ns0:id>http://arxiv.org/abs/2209.05457v1</ns0:id>
-    <ns0:updated>2022-08-29T23:14:02Z</ns0:updated>
-    <ns0:published>2022-08-29T23:14:02Z</ns0:published>
-    <ns0:title>Reliable and Resilient AI and IoT-based Personalised Healthcare
-  Services: A Survey</ns0:title>
-    <ns0:summary>  Recent technological and economic developments have transformed the
+Title: Reliable and Resilient AI and IoT-based Personalised Healthcare
+  Services: A Survey
+
+Summary:   Recent technological and economic developments have transformed the
 healthcare sector towards more personalized and IoT-based healthcare services.
 These services are realized through control and monitoring applications that
 are typically developed using artificial intelligence/machine learning-based
@@ -30,19 +27,6 @@ of IoT architecture along with the possible AI and non-AI-based solutions.
 Finally, we propose a methodology to develop reliable, resilient, and
 personalized healthcare services that address the identified weaknesses of
 existing approaches.
-</ns0:summary>
-    <ns0:author>
-      <ns0:name>Najma Taimoor</ns0:name>
-    </ns0:author>
-    <ns0:author>
-      <ns0:name>Semeen Rehman</ns0:name>
-    </ns0:author>
-    <ns1:doi>10.1109/ACCESS.2021.3137364</ns1:doi>
-    <ns0:link title="doi" href="http://dx.doi.org/10.1109/ACCESS.2021.3137364" rel="related" />
-    <ns1:journal_ref>in IEEE Access, vol. 10, pp. 535-563, 2022</ns1:journal_ref>
-    <ns0:link href="http://arxiv.org/abs/2209.05457v1" rel="alternate" type="text/html" />
-    <ns0:link title="pdf" href="http://arxiv.org/pdf/2209.05457v1" rel="related" type="application/pdf" />
-    <ns1:primary_category term="cs.CY" scheme="http://arxiv.org/schemas/atom" />
-    <ns0:category term="cs.CY" scheme="http://arxiv.org/schemas/atom" />
-  </ns0:entry>
-  
+
+
+PDF: http://arxiv.org/pdf/2209.05457v1

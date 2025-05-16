@@ -1,5 +1,11 @@
 crewai 
-langchain-google-genai 
 pyyaml 
 arxiv 
 requests
+streamlit 
+weasyprint 
+markdown
+reportlab
+python-docx 
+pywin32
+pydantic

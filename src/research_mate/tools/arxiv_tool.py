@@ -58,16 +58,17 @@ class ArxivTool(BaseTool):
                 summary = summary_elem.text if summary_elem is not None else "No summary available"
                 pdf_link = pdf_link_elem.get('href') if pdf_link_elem is not None else "No PDF link available"
 
-                # Save raw XML
-                xml_path = f"outputs/articles/arxiv_{idx}_{safe_topic}.xml"
-                with open(xml_path, "w", encoding="utf-8") as f:
-                    f.write(ElementTree.tostring(entry, encoding='unicode'))
-                logging.info(f"[ArxivTool] Saved raw Arxiv XML: {xml_path}")
+                # Save as text file instead of XML
+                txt_path = f"outputs/articles/arxiv_{idx}_{safe_topic}.txt"
+                content = f"Title: {title}\n\nSummary: {summary}\n\nPDF: {pdf_link}"
+                with open(txt_path, "w", encoding="utf-8") as f:
+                    f.write(content)
+                logging.info(f"[ArxivTool] Saved Arxiv text: {txt_path}")
 
                 # Add paper to list
                 papers.append({
                     "title": title,
-                    "content": f"Title: {title}\n\nSummary: {summary}\n\nPDF: {pdf_link}"
+                    "content": content
                 })
 
         except ElementTree.ParseError as e:

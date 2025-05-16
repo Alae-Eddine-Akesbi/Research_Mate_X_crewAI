@@ -7,7 +7,7 @@ research_agent:
     Focus on collecting only the most relevant, high-quality academic content.
   llm:
     provider: google
-    model: gemini-1.5-flash  # Updated model name
+    model: gemini-1.5-flash  
   tools:
     - research_mate.tools.pubmed_tool.PubMedTool
     - research_mate.tools.arxiv_tool.ArxivTool
@@ -27,7 +27,7 @@ summariser_agent:
     - Be fully ready for markdown-to-PDF conversion.
   llm:
     provider: google
-    model: gemini-1.5-flash  # Updated model name
+    model: gemini-1.5-flash  
 
 editor_agent:
   role: Academic Editor
@@ -40,4 +40,4 @@ editor_agent:
     - Produce a final report ready for research publication.
   llm:
     provider: google
-    model: gemini-1.5-flash  # Updated model name
+    model: gemini-1.5-flash  

@@ -33,17 +33,12 @@ def get_llm():
     
     try:
         return LLM(
-            model="gemini/gemini-1.5-flash",  # Explicitly specify provider/model for LiteLLM
+            model="gemini/gemini-1.5-flash", 
             api_key=api_key,
-            temperature=0.7
+            temperature=0.5
         )
     except Exception as e:
-        print(f"Error initializing gemini/gemini-1.5-flash: {str(e)}. Falling back to gemini-pro.")
-        return LLM(
-            model="gemini/gemini-pro",
-            api_key=api_key,
-            temperature=0.7
-        )
+        print(f"Error initializing gemini/gemini-1.5-flash: {str(e)}.")
 
 # Define tools for the research agent
 tools = {
@@ -133,7 +128,3 @@ def run_crew(topic):
     result = crew.kickoff()
     return result
 
-if __name__ == "__main__":
-    topic = "Machine Learning in Healthcare"
-    result = run_crew(topic)
-    print(result)

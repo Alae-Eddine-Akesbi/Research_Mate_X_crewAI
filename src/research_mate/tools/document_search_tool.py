@@ -25,7 +25,7 @@ class DocumentSearchTool(BaseTool):
         
         results = []
         for filename in os.listdir(search_dir):
-            if filename.endswith(('.txt', '.xml')):
+            if filename.endswith(('.txt')):
                 file_path = os.path.join(search_dir, filename)
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
