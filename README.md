@@ -67,31 +67,47 @@ L’architecture repose sur **crewai**, orchestration d’agents intelligents po
 1. **Clonez** le dépôt :
 
    ```bash
+   git clone https://github.com/Alae-Eddine-Akesbi/Research_Mate_X_crewAI
+   cd research-mate
    ```
-
-git clone [https://github.com/votre-utilisateur/research-mate.git](https://github.com/votre-utilisateur/research-mate.git)
-cd research-mate
-
-````
 2. **Créez** un environnement virtuel et installez les dépendances :
-    ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-````
 
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
 3. **Configurez** vos clés API :
 
    ```bash
+   # Fichier .env
+   MODEL=gemini/gemini-1.5-flash
+   GOOGLE_API_KEY=Votre_Cle_Google_Cloud
    ```
-
-# Fichier .env
-
-MODEL=gemini/gemini-1.5-flash
-GOOGLE\_API\_KEY=Votre\_Cle\_Google\_Cloud
-
-````
 4. **Vérifiez** l’accès Internet pour PubMed et ArXiv.
+
+---
+
+## 🤖 Architecture des Agents
+
+Research Mate utilise trois agents spécialisés dans un pipeline de traitement :
+
+1. **Agent de Collecte** (`collector_agent`)
+
+   * Outils : `pubmed_tool.py`, `arxiv_tool.py`, `document_search_tool.py`
+   * Recherche et télécharge des articles scientifiques et documents locaux.
+
+2. **Agent de Synthèse** (`summarizer_agent`)
+
+   * Modèle : **Gemini 1.5 Flash** de Google Cloud
+   * Génère des résumés cohérents et concis des contenus collectés.
+
+3. **Agent d’Édition** (`editor_agent`)
+
+   * Modèle : **Gemini 1.5 Flash** de Google Cloud
+   * Réorganise, formate et enrichit le rapport final (Markdown / PDF).
+
+Les agents sont configurés dans `src/research_mate/config/agents.yaml` et orchestrés via `crew.py` selon la séquence définie dans `tasks.yaml`.
 
 ---
 
@@ -103,7 +119,7 @@ GOOGLE\_API\_KEY=Votre\_Cle\_Google\_Cloud
 # Générer un rapport Markdown
 python main.py "Machine Learning in Healthcare"
 # Résultat -> outputs/report_Machine_Learning_in_Healthcare.md
-````
+```
 
 ### 2. Interface Web (Streamlit)
 
@@ -124,17 +140,6 @@ streamlit run main_streamlit.py
 * **Prompts & résumés** : ajustez les fonctions de `research_mate.utils` pour modifier la longueur ou le style des résumés.
 
 ---
-
-## 🧱 Packaging & Scripts
-
-* **pyproject.toml** définit le package `research_mate` (version 0.1.0).
-* Entrypoints CLI disponibles :
-
-  * `research_mate` -> `research_mate.main:run`
-  * `run_crew`      -> `research_mate.main:run`
-
----
-
 
 ## 📄 Licence
 
